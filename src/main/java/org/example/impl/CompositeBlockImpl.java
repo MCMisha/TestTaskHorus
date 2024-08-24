@@ -3,7 +3,6 @@ package org.example.impl;
 import org.example.interfaces.Block;
 import org.example.interfaces.CompositeBlock;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,7 +15,7 @@ public class CompositeBlockImpl implements CompositeBlock {
 
     @Override
     public List<Block> getBlocks() {
-        return List.of();
+        return blocks;
     }
 
     @Override
