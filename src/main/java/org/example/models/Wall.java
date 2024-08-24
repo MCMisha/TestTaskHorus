@@ -24,7 +24,7 @@ public class Wall implements Structure {
             if (block instanceof CompositeBlock) {
                 List<Block> blocksFromComposite = ((CompositeBlock) block).getBlocks();
                 for (Block blockFromComposite : blocksFromComposite) {
-                    if (blockFromComposite.getColor().equals(color)){
+                    if (blockFromComposite.getColor().contains(color)){
                         return Optional.of(blockFromComposite);
                     }
                 }
@@ -43,7 +43,7 @@ public class Wall implements Structure {
             if (block instanceof CompositeBlock) {
                 List<Block> blocksFromComposite = ((CompositeBlock) block).getBlocks();
                 for (Block blockFromComposite : blocksFromComposite) {
-                    if (blockFromComposite.getMaterial().equals(material)){
+                    if (blockFromComposite.getMaterial().contains(material)){
                         blocksByMaterial.add(blockFromComposite);
                     }
                 }
